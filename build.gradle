@@ -1,0 +1,21 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    // Top-level variables used for versioning
+    ext.kotlin_version = '1.5.21'
+    ext.java_version = JavaVersion.VERSION_1_8
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath libs.gradle
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath libs.androidx.navigation.safe.args.gradle.plugin
+        classpath libs.gradle.download.task
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
